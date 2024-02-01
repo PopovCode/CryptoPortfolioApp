@@ -8,6 +8,7 @@ const CryptoContext = createContext({
   loading: false,
 });
 
+// eslint-disable-next-line react/prop-types
 export function CryptoContextProvider({ children }) {
   const [loading, setLoading] = useState(false);
   const [crypto, setCrypto] = useState([]);
@@ -54,6 +55,7 @@ export function CryptoContextProvider({ children }) {
 
 export default CryptoContext;
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useCrypto() {
   return useContext(CryptoContext);
 }
